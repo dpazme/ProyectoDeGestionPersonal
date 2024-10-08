@@ -16,5 +16,22 @@ namespace ProyectoDeGestionPersonal
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            panelDatos.Location = new Point((this.Width / 2 - panelDatos.Width / 2),
+              (this.Height - panelDatos.Height) / 2);
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            dateTimePicker1.Value= monthCalendar1.SelectionStart;
+
+        }
     }
 }
