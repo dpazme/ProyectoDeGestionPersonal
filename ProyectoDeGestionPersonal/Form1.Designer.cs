@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbcPlantilla1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -60,13 +61,19 @@
             this.lblSatisfaccion = new System.Windows.Forms.Label();
             this.trackBarSatisfaccion = new System.Windows.Forms.TrackBar();
             this.lblnumeracion = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblFotoPerfil = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblFechaHora = new System.Windows.Forms.Label();
             this.tbcPlantilla1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.panelDatos.SuspendLayout();
             this.gboxGenero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSatisfaccion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPlantilla1
@@ -114,9 +121,12 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage3.Controls.Add(this.lblFechaHora);
+            this.tabPage3.Controls.Add(this.lblFotoPerfil);
+            this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(962, 565);
+            this.tabPage3.Size = new System.Drawing.Size(972, 628);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Visualizacion";
             // 
@@ -390,6 +400,38 @@
             this.lblnumeracion.Size = new System.Drawing.Size(0, 16);
             this.lblnumeracion.TabIndex = 9;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoDeGestionPersonal.Properties.Resources.fotoPerfil;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 267);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblFotoPerfil
+            // 
+            this.lblFotoPerfil.AutoSize = true;
+            this.lblFotoPerfil.Location = new System.Drawing.Point(73, 26);
+            this.lblFotoPerfil.Name = "lblFotoPerfil";
+            this.lblFotoPerfil.Size = new System.Drawing.Size(115, 16);
+            this.lblFotoPerfil.TabIndex = 1;
+            this.lblFotoPerfil.Text = "FOTO DE PERFIL";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblFechaHora
+            // 
+            this.lblFechaHora.AutoSize = true;
+            this.lblFechaHora.Location = new System.Drawing.Point(111, 428);
+            this.lblFechaHora.Name = "lblFechaHora";
+            this.lblFechaHora.Size = new System.Drawing.Size(34, 16);
+            this.lblFechaHora.TabIndex = 2;
+            this.lblFechaHora.Text = "hora";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -404,12 +446,15 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.panelDatos.ResumeLayout(false);
             this.panelDatos.PerformLayout();
             this.gboxGenero.ResumeLayout(false);
             this.gboxGenero.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarSatisfaccion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -448,6 +493,10 @@
         private System.Windows.Forms.Label lblSatisfaccion;
         private System.Windows.Forms.Label lblPais;
         private System.Windows.Forms.Label lblnumeracion;
+        private System.Windows.Forms.Label lblFotoPerfil;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblFechaHora;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
