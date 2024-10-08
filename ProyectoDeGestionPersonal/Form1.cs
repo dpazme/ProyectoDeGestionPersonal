@@ -33,5 +33,10 @@ namespace ProyectoDeGestionPersonal
             dateTimePicker1.Value= monthCalendar1.SelectionStart;
 
         }
+
+        private void trackBarSatisfaccion_Scroll(object sender, EventArgs e)
+        {
+            lblnumeracion.Text = trackBarSatisfaccion.Value.ToString();
+        }
     }
 }

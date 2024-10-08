@@ -50,11 +50,23 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.lblSuscripcion = new System.Windows.Forms.Label();
+            this.chkSi = new System.Windows.Forms.CheckBox();
+            this.chkNo = new System.Windows.Forms.CheckBox();
+            this.chklHobbies = new System.Windows.Forms.CheckedListBox();
+            this.lblHobbies = new System.Windows.Forms.Label();
+            this.cboPaisResidencia = new System.Windows.Forms.ComboBox();
+            this.lblPais = new System.Windows.Forms.Label();
+            this.lblSatisfaccion = new System.Windows.Forms.Label();
+            this.trackBarSatisfaccion = new System.Windows.Forms.TrackBar();
+            this.lblnumeracion = new System.Windows.Forms.Label();
             this.tbcPlantilla1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.panelDatos.SuspendLayout();
             this.gboxGenero.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDow)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSatisfaccion)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPlantilla1
@@ -82,10 +94,20 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage2.Controls.Add(this.lblnumeracion);
+            this.tabPage2.Controls.Add(this.trackBarSatisfaccion);
+            this.tabPage2.Controls.Add(this.lblSatisfaccion);
+            this.tabPage2.Controls.Add(this.lblPais);
+            this.tabPage2.Controls.Add(this.cboPaisResidencia);
+            this.tabPage2.Controls.Add(this.lblHobbies);
+            this.tabPage2.Controls.Add(this.chklHobbies);
+            this.tabPage2.Controls.Add(this.chkNo);
+            this.tabPage2.Controls.Add(this.chkSi);
+            this.tabPage2.Controls.Add(this.lblSuscripcion);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(962, 565);
+            this.tabPage2.Size = new System.Drawing.Size(972, 628);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Preferencias";
             // 
@@ -267,6 +289,107 @@
             this.lblFechaNacimiento.TabIndex = 14;
             this.lblFechaNacimiento.Text = "Fecha Nacimiento";
             // 
+            // lblSuscripcion
+            // 
+            this.lblSuscripcion.AutoSize = true;
+            this.lblSuscripcion.Location = new System.Drawing.Point(30, 30);
+            this.lblSuscripcion.Name = "lblSuscripcion";
+            this.lblSuscripcion.Size = new System.Drawing.Size(145, 16);
+            this.lblSuscripcion.TabIndex = 0;
+            this.lblSuscripcion.Text = "¿Suscribirse al boletín?";
+            // 
+            // chkSi
+            // 
+            this.chkSi.AutoSize = true;
+            this.chkSi.Location = new System.Drawing.Point(33, 77);
+            this.chkSi.Name = "chkSi";
+            this.chkSi.Size = new System.Drawing.Size(41, 20);
+            this.chkSi.TabIndex = 1;
+            this.chkSi.Text = "Si";
+            this.chkSi.UseVisualStyleBackColor = true;
+            // 
+            // chkNo
+            // 
+            this.chkNo.AutoSize = true;
+            this.chkNo.Location = new System.Drawing.Point(126, 76);
+            this.chkNo.Name = "chkNo";
+            this.chkNo.Size = new System.Drawing.Size(47, 20);
+            this.chkNo.TabIndex = 2;
+            this.chkNo.Text = "No";
+            this.chkNo.UseVisualStyleBackColor = true;
+            // 
+            // chklHobbies
+            // 
+            this.chklHobbies.FormattingEnabled = true;
+            this.chklHobbies.Items.AddRange(new object[] {
+            "Futbol",
+            "Danza",
+            "Videojuegos"});
+            this.chklHobbies.Location = new System.Drawing.Point(39, 193);
+            this.chklHobbies.Name = "chklHobbies";
+            this.chklHobbies.Size = new System.Drawing.Size(142, 106);
+            this.chklHobbies.TabIndex = 3;
+            // 
+            // lblHobbies
+            // 
+            this.lblHobbies.AutoSize = true;
+            this.lblHobbies.Location = new System.Drawing.Point(36, 162);
+            this.lblHobbies.Name = "lblHobbies";
+            this.lblHobbies.Size = new System.Drawing.Size(62, 16);
+            this.lblHobbies.TabIndex = 4;
+            this.lblHobbies.Text = "Hobbies:";
+            // 
+            // cboPaisResidencia
+            // 
+            this.cboPaisResidencia.FormattingEnabled = true;
+            this.cboPaisResidencia.Items.AddRange(new object[] {
+            "España",
+            "Rumani",
+            "Francia",
+            "Suiza",
+            "Portugal",
+            "Belgica",
+            "Holanda",
+            "Albania"});
+            this.cboPaisResidencia.Location = new System.Drawing.Point(665, 77);
+            this.cboPaisResidencia.Name = "cboPaisResidencia";
+            this.cboPaisResidencia.Size = new System.Drawing.Size(139, 24);
+            this.cboPaisResidencia.TabIndex = 5;
+            // 
+            // lblPais
+            // 
+            this.lblPais.AutoSize = true;
+            this.lblPais.Location = new System.Drawing.Point(688, 42);
+            this.lblPais.Name = "lblPais";
+            this.lblPais.Size = new System.Drawing.Size(128, 16);
+            this.lblPais.TabIndex = 6;
+            this.lblPais.Text = "Pais de Residencia:";
+            // 
+            // lblSatisfaccion
+            // 
+            this.lblSatisfaccion.AutoSize = true;
+            this.lblSatisfaccion.Location = new System.Drawing.Point(45, 379);
+            this.lblSatisfaccion.Name = "lblSatisfaccion";
+            this.lblSatisfaccion.Size = new System.Drawing.Size(169, 16);
+            this.lblSatisfaccion.TabIndex = 7;
+            this.lblSatisfaccion.Text = "Satisfaccion con el servicio";
+            // 
+            // trackBarSatisfaccion
+            // 
+            this.trackBarSatisfaccion.Location = new System.Drawing.Point(39, 449);
+            this.trackBarSatisfaccion.Name = "trackBarSatisfaccion";
+            this.trackBarSatisfaccion.Size = new System.Drawing.Size(166, 56);
+            this.trackBarSatisfaccion.TabIndex = 8;
+            this.trackBarSatisfaccion.Scroll += new System.EventHandler(this.trackBarSatisfaccion_Scroll);
+            // 
+            // lblnumeracion
+            // 
+            this.lblnumeracion.AutoSize = true;
+            this.lblnumeracion.Location = new System.Drawing.Point(229, 458);
+            this.lblnumeracion.Name = "lblnumeracion";
+            this.lblnumeracion.Size = new System.Drawing.Size(0, 16);
+            this.lblnumeracion.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -279,11 +402,14 @@
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.tbcPlantilla1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.panelDatos.ResumeLayout(false);
             this.panelDatos.PerformLayout();
             this.gboxGenero.ResumeLayout(false);
             this.gboxGenero.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDow)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarSatisfaccion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -312,6 +438,16 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label lblFechaNacimiento;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.CheckedListBox chklHobbies;
+        private System.Windows.Forms.CheckBox chkNo;
+        private System.Windows.Forms.CheckBox chkSi;
+        private System.Windows.Forms.Label lblSuscripcion;
+        private System.Windows.Forms.ComboBox cboPaisResidencia;
+        private System.Windows.Forms.Label lblHobbies;
+        private System.Windows.Forms.TrackBar trackBarSatisfaccion;
+        private System.Windows.Forms.Label lblSatisfaccion;
+        private System.Windows.Forms.Label lblPais;
+        private System.Windows.Forms.Label lblnumeracion;
     }
 }
 
