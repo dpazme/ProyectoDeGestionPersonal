@@ -54,5 +54,28 @@ namespace ProyectoDeGestionPersonal
         {
             lblFechaHora.Text = DateTime.Now.ToString();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            // Mostrar un MessageBox con el resumen de los datos
+            string resumen = $"Nombre: {txtNombre.Text}\n" +
+                             $"Apellidos: {txtApellidos.Text}\n" +
+                             $"Dirección: {txtDireccion.Text}\n" +
+                             $"Correo: {txtCorreo.Text}\n" +
+                             $"Género: {(rboMasculino.Checked ? "Masculino" : rboFemenino.Checked ? "Femenino" :  "Otro")}\n" +
+                             $"Fecha de Nacimiento: {monthCalendar1.SelectionStart.ToShortDateString()}\n" +
+                             $"Edad: {numericUpDow.Value}\n" +
+                             $"Boletín: {(chkSi.Checked ? "Sí" : "No")}\n" +
+                             $"País: {cboPaisResidencia.SelectedItem}\n" +
+                             $"Satisfacción: {trackBarSatisfaccion.Value}/10";
+
+            MessageBox.Show(resumen, "Resumen de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        
+    }
     }
 }
