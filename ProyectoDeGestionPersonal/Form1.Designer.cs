@@ -61,10 +61,15 @@
             this.lblSatisfaccion = new System.Windows.Forms.Label();
             this.trackBarSatisfaccion = new System.Windows.Forms.TrackBar();
             this.lblnumeracion = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFotoPerfil = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblFechaHora = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tbcPlantilla1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -81,10 +86,10 @@
             this.tbcPlantilla1.Controls.Add(this.tabPage1);
             this.tbcPlantilla1.Controls.Add(this.tabPage2);
             this.tbcPlantilla1.Controls.Add(this.tabPage3);
-            this.tbcPlantilla1.Location = new System.Drawing.Point(38, 24);
+            this.tbcPlantilla1.Location = new System.Drawing.Point(37, 51);
             this.tbcPlantilla1.Name = "tbcPlantilla1";
             this.tbcPlantilla1.SelectedIndex = 0;
-            this.tbcPlantilla1.Size = new System.Drawing.Size(980, 657);
+            this.tbcPlantilla1.Size = new System.Drawing.Size(1040, 589);
             this.tbcPlantilla1.TabIndex = 0;
             // 
             // tabPage1
@@ -94,7 +99,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(972, 628);
+            this.tabPage1.Size = new System.Drawing.Size(1032, 560);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Datos Personales";
             // 
@@ -114,7 +119,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(972, 628);
+            this.tabPage2.Size = new System.Drawing.Size(1032, 560);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Preferencias";
             // 
@@ -126,12 +131,13 @@
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(972, 628);
+            this.tabPage3.Size = new System.Drawing.Size(1032, 560);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Visualizacion";
             // 
             // panelDatos
             // 
+            this.panelDatos.Controls.Add(this.button1);
             this.panelDatos.Controls.Add(this.lblFechaNacimiento);
             this.panelDatos.Controls.Add(this.dateTimePicker1);
             this.panelDatos.Controls.Add(this.monthCalendar1);
@@ -148,7 +154,7 @@
             this.panelDatos.Controls.Add(this.lblNombre);
             this.panelDatos.Location = new System.Drawing.Point(3, 6);
             this.panelDatos.Name = "panelDatos";
-            this.panelDatos.Size = new System.Drawing.Size(963, 607);
+            this.panelDatos.Size = new System.Drawing.Size(1023, 548);
             this.panelDatos.TabIndex = 0;
             // 
             // lblNombre
@@ -192,9 +198,9 @@
             this.gboxGenero.Controls.Add(this.rboOtro);
             this.gboxGenero.Controls.Add(this.rboFemenino);
             this.gboxGenero.Controls.Add(this.rboMasculino);
-            this.gboxGenero.Location = new System.Drawing.Point(51, 242);
+            this.gboxGenero.Location = new System.Drawing.Point(737, 95);
             this.gboxGenero.Name = "gboxGenero";
-            this.gboxGenero.Size = new System.Drawing.Size(774, 80);
+            this.gboxGenero.Size = new System.Drawing.Size(193, 234);
             this.gboxGenero.TabIndex = 5;
             this.gboxGenero.TabStop = false;
             this.gboxGenero.Text = "Genero";
@@ -202,7 +208,7 @@
             // rboMasculino
             // 
             this.rboMasculino.AutoSize = true;
-            this.rboMasculino.Location = new System.Drawing.Point(63, 49);
+            this.rboMasculino.Location = new System.Drawing.Point(43, 45);
             this.rboMasculino.Name = "rboMasculino";
             this.rboMasculino.Size = new System.Drawing.Size(89, 20);
             this.rboMasculino.TabIndex = 0;
@@ -213,7 +219,7 @@
             // rboFemenino
             // 
             this.rboFemenino.AutoSize = true;
-            this.rboFemenino.Location = new System.Drawing.Point(295, 49);
+            this.rboFemenino.Location = new System.Drawing.Point(44, 83);
             this.rboFemenino.Name = "rboFemenino";
             this.rboFemenino.Size = new System.Drawing.Size(88, 20);
             this.rboFemenino.TabIndex = 1;
@@ -224,7 +230,7 @@
             // rboOtro
             // 
             this.rboOtro.AutoSize = true;
-            this.rboOtro.Location = new System.Drawing.Point(565, 49);
+            this.rboOtro.Location = new System.Drawing.Point(44, 127);
             this.rboOtro.Name = "rboOtro";
             this.rboOtro.Size = new System.Drawing.Size(60, 20);
             this.rboOtro.TabIndex = 2;
@@ -262,7 +268,7 @@
             // 
             // numericUpDow
             // 
-            this.numericUpDow.Location = new System.Drawing.Point(114, 360);
+            this.numericUpDow.Location = new System.Drawing.Point(818, 40);
             this.numericUpDow.Name = "numericUpDow";
             this.numericUpDow.Size = new System.Drawing.Size(120, 22);
             this.numericUpDow.TabIndex = 10;
@@ -270,7 +276,7 @@
             // lblEdad
             // 
             this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(51, 365);
+            this.lblEdad.Location = new System.Drawing.Point(734, 40);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(40, 16);
             this.lblEdad.TabIndex = 11;
@@ -278,14 +284,14 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(616, 357);
+            this.monthCalendar1.Location = new System.Drawing.Point(231, 314);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 12;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(616, 328);
+            this.dateTimePicker1.Location = new System.Drawing.Point(231, 265);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(251, 22);
             this.dateTimePicker1.TabIndex = 13;
@@ -293,7 +299,7 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(428, 357);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(50, 265);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(116, 16);
             this.lblFechaNacimiento.TabIndex = 14;
@@ -400,15 +406,6 @@
             this.lblnumeracion.Size = new System.Drawing.Size(0, 16);
             this.lblnumeracion.TabIndex = 9;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoDeGestionPersonal.Properties.Resources.fotoPerfil;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 69);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 267);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblFotoPerfil
             // 
             this.lblFotoPerfil.AutoSize = true;
@@ -426,18 +423,75 @@
             // lblFechaHora
             // 
             this.lblFechaHora.AutoSize = true;
-            this.lblFechaHora.Location = new System.Drawing.Point(111, 428);
+            this.lblFechaHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaHora.Location = new System.Drawing.Point(604, 167);
             this.lblFechaHora.Name = "lblFechaHora";
-            this.lblFechaHora.Size = new System.Drawing.Size(34, 16);
+            this.lblFechaHora.Size = new System.Drawing.Size(174, 32);
             this.lblFechaHora.TabIndex = 2;
-            this.lblFechaHora.Text = "hora";
+            this.lblFechaHora.Text = "fechaHORA";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnGuardar.Location = new System.Drawing.Point(95, 653);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(149, 43);
+            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.Text = "GUARDAR";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoDeGestionPersonal.Properties.Resources.fotoPerfil;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 267);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(112, 574);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLimpiar.Location = new System.Drawing.Point(486, 653);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(149, 43);
+            this.btnLimpiar.TabIndex = 16;
+            this.btnLimpiar.Text = "LIMPIAR";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSalir.Location = new System.Drawing.Point(815, 656);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(149, 43);
+            this.btnSalir.TabIndex = 17;
+            this.btnSalir.Text = "SALIR";
+            this.btnSalir.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1151, 728);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.tbcPlantilla1);
+            this.Controls.Add(this.btnGuardar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Gestion Avanzada de Informacion Personal";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -497,6 +551,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblFechaHora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
