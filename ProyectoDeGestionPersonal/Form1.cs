@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyectoDeGestionPersonal
 {
@@ -19,7 +20,15 @@ namespace ProyectoDeGestionPersonal
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            // Configuración del ToolTip
+           
+            toolTip1.AutomaticDelay = 500;
+            toolTip1.ShowAlways = true;
+            toolTip1.IsBalloon = true;
+
+            // Asociar el ToolTip al botón "Guardar"
+            toolTip1.SetToolTip(btnGuardar, "Guardar los cambios");
+
             timer1.Start();
           
         }
