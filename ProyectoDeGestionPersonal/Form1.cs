@@ -26,7 +26,7 @@ namespace ProyectoDeGestionPersonal
             toolTip1.ShowAlways = true;
             toolTip1.IsBalloon = true;
 
-            // Asociar el ToolTip al botón "Guardar"
+            // Asociar el ToolTip al botón GUARDAD
             toolTip1.SetToolTip(btnGuardar, "Guardar los cambios");
 
             timer1.Start();
@@ -71,11 +71,37 @@ namespace ProyectoDeGestionPersonal
                              $"Fecha de Nacimiento: {monthCalendar1.SelectionStart.ToShortDateString()}\n" +
                              $"Edad: {numericUpDow.Value}\n" +
                              $"Boletín: {(chkSi.Checked ? "Sí" : "No")}\n" +
+                             $"Hobbies: {string.Join(", ", chklHobbies.CheckedItems.Cast<string>())}\n" +
                              $"País: {cboPaisResidencia.SelectedItem}\n" +
                              $"Satisfacción: {trackBarSatisfaccion.Value}/10";
 
             MessageBox.Show(resumen, "Resumen de Datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
         
-    }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            txtNombre.Clear();
+            txtApellidos.Clear();
+            txtDireccion.Clear();
+            txtCorreo.Clear();
+            rboMasculino.Checked = false;
+            rboFemenino.Checked = false;
+            rboOtro.Checked = false;
+            numericUpDow.Value = 1;
+            monthCalendar1.SetDate(DateTime.Today);
+            chkSi.Checked = false;
+            chkNo.Checked = false;
+            foreach (int i in chklHobbies.CheckedIndices)
+            {
+                chklHobbies.SetItemCheckState(i, CheckState.Unchecked);
+            }
+            cboPaisResidencia.SelectedIndex = -1;
+            trackBarSatisfaccion.Value = 1;
+
+            // Mostrar MessageBox indicando que los campos fueron limpiados
+            MessageBox.Show("Los campos han sido borrados.", "Formulario Limpio", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        
+        }
     }
 }
